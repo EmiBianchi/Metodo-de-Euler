@@ -1,5 +1,5 @@
 """
-
+LOS COMENTARIOS PARA CORREGIR EL CÓDIGO ESTÁN DENTRO DEL MISMO. CORRIGEN Y COMITEEEN PARA QUE ME APAREZCAN LOS CAMBIOS, ME AVISAN ASÍ ENTRO A MIRAR.
 Alumnas: Ascurra, Micaela; Bianchi, Emiliana; Caro Boldrini, Victoria; Guzman, Dana
 
 Análisis Matemático II - Ingeniería en Sistemas de Información - 2024
@@ -10,7 +10,7 @@ El método de Euler constituye sólo una de muchas formas en que es posible apro
 Propone empezar en el punto dado por el valor inicial y avanzar en la dirección indicada por el campo direccional.
 
 """
-
+//faltaría agregar que el método avanza hasta el punto donde quiero obtener la aproximación, que aproxima un PVI...
 def metodo_Euler(f, x0, y0, h, n):
     """
     Implementación del método de Euler para resolver una EDO:
@@ -18,6 +18,11 @@ def metodo_Euler(f, x0, y0, h, n):
     f: La función que define la EDO dy/dx = f(x, y).
     x0: El valor inicial de x.
     y0: El valor inicial de y en x0.
+    """
+    acá vamos a tener un problema, porque como el método de Euler nos aproxima la solución a un PVI, entonces, y0(x0) debería ser dato, 
+    no que sea proporcionado por el usuario (traten de razonar qué sería la SPVI en términos gráficos... una familia? una curva de una familia?
+    en ese caso pueden x0 e y0 ser valores cualesquiera?)
+    """
     h: El tamaño del paso.
     n: El número total de pasos.
     """
@@ -47,3 +52,10 @@ for valor in solucion:
     x_redondeado = round(valor[0], 3)
     y_redondeado = round(valor[1], 3)
     print(f"x = {x_redondeado}, y = {y_redondeado}")
+    """
+    Otro cuestión es, fíjense que las ecuaciones proporcionadas en el ejercicio no son la que ustedes han usado. Dejando de lado eso, 
+    su script lo que hace es aproximar la solución en un punto que va a depender del paso que le pongan y el número de iteraciones.
+    Lo que deben obtener como resultado es el valor de la EDO en un punto cercano al punto origen de la aporximación. 
+    Usen los ejemplos dados porque los pueden resolver analíticamente, y así verificar lo que obtienen con el código
+    """
+    
